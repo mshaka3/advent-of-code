@@ -1,9 +1,9 @@
 import { join } from "path";
-import { fileToArray } from "../../helpers/fileToArray";
+import { processFile } from "../../helpers/processFile";
 
 export async function day5P2() {
   const filePath = join(__dirname, "input.txt");
-  const { fileAsString } = await fileToArray(filePath);
+  const { fileAsString } = await processFile(filePath);
 
   const [stackCreates, instrcutions] = fileAsString.split("\n\n");
 

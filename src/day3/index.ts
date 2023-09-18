@@ -1,15 +1,15 @@
 import { readFile } from "fs/promises";
 import { join } from "path";
+import { processFile } from "../helpers/processFile";
 
 export async function day3() {
   const filePath = join(__dirname, "input.txt");
-  const allFileContents = await readFile(filePath, "utf-8");
-  const fileToArray = allFileContents.split("\n");
+  const { fileAsArray } = await processFile(filePath);
 
   var sum = 0;
   var groupLines = [];
 
-  for (const line of fileToArray) {
+  for (const line of fileAsArray) {
     if (line.length == 0) continue;
 
     var lineChars = [];

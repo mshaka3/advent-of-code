@@ -1,10 +1,9 @@
 import { join } from "path";
-import { fileToArray } from "../../helpers/fileToArray";
-import { warn } from "console";
+import { processFile } from "../../helpers/processFile";
 
 export async function day4Part1() {
   const filePath = join(__dirname, "input.txt");
-  const { fileAsArray } = await fileToArray(filePath);
+  const { fileAsArray } = await processFile(filePath);
 
   var result = 0;
 
