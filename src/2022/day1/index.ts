@@ -1,4 +1,4 @@
-import { maxHeap } from "../helpers/maxheap";
+import { maxHeap } from "../../helpers/maxheap";
 
 export function day1(input: string) {
   var toArray = input.split("\n\n").map((group) => group.split("\n"));
