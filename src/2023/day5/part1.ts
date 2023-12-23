@@ -1,6 +1,5 @@
 import { join } from "path";
 import { processFile } from "../../helpers/processFile";
-import { constrainedMemory } from "process";
 
 export async function part1() {
   const filePath = join(__dirname, "input.txt");
